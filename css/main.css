@@ -146,9 +146,9 @@
 		font-weight: bold;
 		font-size: var(--hrFontSize);
 		background-color: #000;
-		position: absolute;
 		padding: 0 calc(var(--hrFontSize) - 1px);
 		cursor: default;
+		white-space: nowrap;
 	}
 	.hr .line {
 		display: inline-block;
@@ -156,10 +156,10 @@
 		height: 2px;
 	}
 	.hr .line.left {
-		background: linear-gradient(to left, var(--colorText) 73%, #000);
+		background: linear-gradient(to left, var(--colorText) 72%, #000 99%);
 	}
 	.hr .line.right {
-		background: linear-gradient(to right, var(--colorText) 73%, #000);
+		background: linear-gradient(to right, var(--colorText) 72%, #000 99%);
 	}
 
 /* items-flow */
