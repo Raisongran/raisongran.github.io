@@ -148,15 +148,13 @@
 	.hr .line {
 		display: inline-block;
 		width: 50%;
-		height: 0;
-		border: 1px solid #C4C4C4;
-		border-image-slice: 1;
+		height: 2px;
 	}
 	.hr .line.left {
-		border-image-source: linear-gradient(to left, var(--colorText) 73%, #000);
+		background: linear-gradient(to left, var(--colorText) 73%, #000);
 	}
 	.hr .line.right {
-		border-image-source: linear-gradient(to right, var(--colorText) 73%, #000);
+		background: linear-gradient(to right, var(--colorText) 73%, #000);
 	}
 
 /* items-flow */
