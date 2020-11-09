@@ -39,19 +39,19 @@
 				<p class="label">Also known as Κοσμοκράτωρ</p>
 				<a href="/"><h1>Rene Raisongran</h1></a>
 				<div class="buttons-row">
-					<a href="https://t.me/kosmokrator" class="button">
+					<a class="button" href="https://t.me/kosmokrator">
 						<i class="fa fa-telegram" aria-hidden="true"></i>
 						<p>Telegram</p>
 					</a>
-					<a class="button" id='email'>
+					<a class="button" name='email'>
 						<i class="fa fa-envelope" aria-hidden="true"></i>
 						<p>[Protected]</p>
 					</a>
-					<a href="https://hackaday.io/Raisongran" class="button">
-						<i class="fa fa-hackaday" aria-hidden="true"></i>
-						<p>Hackaday</p>
+					<a class="button" href="https://www.instagram.com/raisongran_">
+						<i class="fa fa-instagram" aria-hidden="true"></i>
+						<p>Instagram</p>
 					</a>
-					<a href="https://open.spotify.com/user/psc7l3zd4i3yiobktvz1gtthu?si=t5R_a8jURMuLbcfVkHLRgQ" class="button">
+					<a class="button" href="https://open.spotify.com/user/psc7l3zd4i3yiobktvz1gtthu?si=t5R_a8jURMuLbcfVkHLRgQ">
 						<i class="fa fa-spotify" aria-hidden="true"></i>
 						<p>Spotify</p>
 					</a>
@@ -178,6 +178,22 @@
 				</div>
 			</div>
 		</div>
+
+		<div class="hr"><div class="line left"></div><div class="line right"></div></div>
+
+		<div class="footer">
+			<p class="copyright" id='full'>© Rene Raisongran, all rights reserved.</p>
+			<p class="copyright" id='short'>© Rene Raisongran</p>
+			<div class="footer-buttons">
+				<a href="https://t.me/kosmokrator"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+				<a name='email' style="display: none"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+				<a href="https://www.instagram.com/raisongran_/"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+				<a href="https://gitlab.com/Jalto"><i class="fa fa-gitlab" aria-hidden="true"></i></a>
+				<a href="https://github.com/Raisongran"><i class="fa fa-github" aria-hidden="true"></i></a>
+				<a href="https://hackaday.io/Raisongran"><i class="fa fa-hackaday" aria-hidden="true"></i></a>
+				<a href="https://open.spotify.com/user/psc7l3zd4i3yiobktvz1gtthu?si=t5R_a8jURMuLbcfVkHLRgQ"><i class="fa fa-spotify" aria-hidden="true"></i></a>
+			</div>
+		</div>
 	</div>
 	<script type="text/javascript">
 		function rot(s, i) {
@@ -187,9 +203,15 @@
 		}
 
 		var encrypted = "znvygb:envfbatena@cebgbaznvy.pbz";
-		var el = document.getElementById('email');
-		el.getElementsByTagName('p')[0].innerText = "E-mail";
-		el.href = rot(encrypted, 13);
+		var els = document.getElementsByName('email');
+		for (i = 0; i < els.length; i++) {
+			els[i].setAttribute('style', "");
+			els[i].href = rot(encrypted, 13);
+			var ps = els[i].getElementsByTagName('p')
+			if (ps.length > 0) {
+				ps[0].innerText = "E-mail";
+			}
+		} 
 	</script>
 </body>
 </html>
